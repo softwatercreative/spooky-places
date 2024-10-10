@@ -1,2 +1,2 @@
 # spooky-places
-spooky-places is a Flask web application that allows users to discover and share haunted locations. Leveraging Leaflet for interactive mapping, users can submit experiences and photos, contributing to a collaborative map of spooky sites. This project focuses on backend development with Flask and frontend integration for dynamic user interactions.
+spooky-places is just getting started! The goal is to build a Flask web app where users can discover and share haunted spots. Eventually, users will be able to add their own spooky experiences and photos, creating a shared map of haunted places with Leaflet for interactive maps.
