@@ -18,7 +18,7 @@ app.add.url.rule('/<name>', 'name_page', test_func)
 
 @app.route('/')
 def hello_world():
-    return 'Hello Zuri'
+    return 'Hello Zuri Barnes'
 
 # main driver function
 if __name__ == '__main__':
