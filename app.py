@@ -1,6 +1,6 @@
 # Importing flask module in the project is mandatory
 # An object of Flask class is our WSGI application.
-from flask import Flask
+from flask import Flask, render_template
 
 # Flask constructor takes the name of 
 # current module (__name__) as argument.
@@ -14,11 +14,11 @@ def test_func(name):
     return f"My name is { name } and I am a python developer."
 
 # Best practice for dynamic abilities, key values (rule or path, endpoint, view function )
-app.add.url.rule('/<name>', 'name_page', test_func)
+app.add_url_rule('/<name>', 'name_page', test_func)
 
 @app.route('/')
-def hello_world():
-    return 'Hello Zuri Barnes'
+def index():
+    return render_template('index.html')
 
 # main driver function
 if __name__ == '__main__':
