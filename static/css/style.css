@@ -119,4 +119,8 @@ table {
 
 /*  END remove default styles */
 
-.final-git-emaol-test {}
+
+h1, p {
+  text-align: center;
+}
+
