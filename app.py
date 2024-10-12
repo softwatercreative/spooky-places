@@ -1,25 +1,19 @@
-# Importing flask module in
+# Importing flask module in the project is mandatory
 # An object of Flask class is our WSGI application.
-from flask import Flask, render_template, request, abort
+from flask import Flask, render_template
 
-# Flask constructor takes the name of
+# Flask constructor takes the name of 
 # current module (__name__) as argument.
 app = Flask(__name__)
 
-# Define the allowed hosts
-ALLOWED_HOSTS = ['mompopapp.herokuapp.com', 'www.softwaterlabs.dev']
+# The route() function of the Flask class is a decorator, 
+# which tells the application which URL should call 
+# the associated function.
 
-# Middleware to check if the request's host is allowed
-@app.before_request
-def restrict_host():
-    host = request.host
-    if host not in ALLOWED_HOSTS:
-        abort(403)  # Forbidden access if host is not in ALLOWED_HOSTS
-
-# Best practice for dynamic abilities, key values (rule or path, endpoint, view function)
 def test_func(name):
-    return f"My name is {name} and I am a python developer."
+    return f"My name is { name } and I am a python developer."
 
+# Best practice for dynamic abilities, key values (rule or path, endpoint, view function )
 app.add_url_rule('/<name>', 'name_page', test_func)
 
 @app.route('/')
@@ -28,6 +22,10 @@ def index():
 
 # main driver function
 if __name__ == '__main__':
-    # run() method of Flask class runs the application
+
+    # run() method of Flask class runs the application 
     # on the local development server.
     app.run()
+
+
+    
