@@ -3,16 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Spookiest Spots</title>
     <!-- Link to the CSS file -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='leafletjs/leaflet.css') }}"
+    />
   </head>
   <body>
     <h1>Spooky Places</h1>
     <p>Unearth the Spookiest Spots | Share your Spooky Stories</p>
     <section class="map-container">
-      <div id="map" stlye="width:600px; height:400px;"></div>
+      <div id="map"></div>
     </section>
-    
+    <script src="{{ url_for('static', filename='leafletjs/leaflet.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/map.js') }}"></script>
   </body>
 </html>
